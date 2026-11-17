@@ -22,7 +22,7 @@ bool isEven(int number)
     return number % 2 == 0;
 }
 
-void addOne(int& number)
+void addOne(int &number)
 {
     ++number;
 }
@@ -35,29 +35,29 @@ int main()
 
     // Data types
     // Exact sizes can vary by platform. Use sizeof(type) to check your system.
-    bool a = true;              // 1 byte | false or true
-    char b = 'A';               // 1 byte
-    int d = 100;                // Whole numbers; at least 16 bits
-    long long f = 10000;        // Large whole numbers; at least 64 bits
-    double h = 100.123456;      // Decimal numbers, approximately 15 significant digits
+    bool a = true;                  // 1 byte | false or true
+    char b = 'A';                   // 1 byte
+    int d = 100;                    // Whole numbers; at least 16 bits
+    long long f = 10000;            // Large whole numbers; at least 64 bits
+    double h = 100.123456;          // Decimal numbers, approximately 15 significant digits
     long double i = 1000.123456789; // More precision on some platforms
-    string word = "C++";        // Text
-    const int daysInWeek = 7;   // const values cannot be changed
+    string word = "C++";            // Text
+    const int daysInWeek = 7;       // const values cannot be changed
 
     // Signed integer overflow is undefined behavior. Pick a type large enough.
     // Floating-point values are approximate; avoid == for most decimal comparisons.
     cout << "sizeof(int): " << sizeof(int) << " bytes\n";
     cout << "Examples: " << boolalpha << a << ", " << b << ", " << d << ", "
-         << f << ", " << h << ", " << i << ", " << word << ", "
-         << daysInWeek << '\n';
+    << f << ", " << h << ", " << i << ", " << word << ", "
+    << daysInWeek << '\n';
 
     // Type casting
     int x = 10;
     double y = 3.14;
     double z = static_cast<double>(x) + y; // Explicit conversion
     cout << "z: " << z << '\n';
-    cout << "Integer division: " << 10 / 3 << '\n';       // 3
-    cout << "Decimal division: " << 10.0 / 3 << '\n';     // Approximately 3.33333
+    cout << "Integer division: " << 10 / 3 << '\n';   // 3
+    cout << "Decimal division: " << 10.0 / 3 << '\n'; // Approximately 3.33333
 
     // Input and output
     // Uncomment these lines when solving an input-based problem:
@@ -78,9 +78,9 @@ int main()
     cout << "Addition: " << num1 + num2 << '\n';
     cout << "Subtraction: " << num1 - num2 << '\n';
     cout << "Multiplication: " << num1 * num2 << '\n';
-    cout << "Division: " << num1 / num2 << '\n';          // Integer division
+    cout << "Division: " << num1 / num2 << '\n'; // Integer division
     cout << "Remainder: " << num1 % num2 << '\n';
-    cout << "Increment: " << ++num1 << '\n';              // Prefix: change, then use
+    cout << "Increment: " << ++num1 << '\n'; // Prefix: change, then use
     cout << "Decrement: " << --num2 << '\n';
 
     // Comparison: ==, !=, <, >, <=, >=. Logical: && (and), || (or), ! (not).
@@ -88,41 +88,50 @@ int main()
 
     // Conditions
     int number = 10;
-    if (number > 0) {
+    if (number > 0)
+    {
         cout << "Positive number\n";
-    } else if (number < 0) {
+    }
+    else if (number < 0)
+    {
         cout << "Negative number\n";
-    } else {
+    }
+    else
+    {
         cout << "Zero\n";
     }
 
     // A switch is useful when comparing one value against fixed choices.
     char grade = 'A';
-    switch (grade) {
-        case 'A':
-            cout << "Excellent\n";
-            break;
-        case 'B':
-            cout << "Good\n";
-            break;
-        default:
-            cout << "Keep practicing\n";
+    switch (grade)
+    {
+    case 'A':
+        cout << "Excellent\n";
+        break;
+    case 'B':
+        cout << "Good\n";
+        break;
+    default:
+        cout << "Keep practicing\n";
     }
 
     // Loops
-    for (int index = 0; index < 3; ++index) {
+    for (int index = 0; index < 3; ++index)
+    {
         cout << "for loop: " << index << '\n';
     }
 
     int countdown = 2;
-    while (countdown > 0) {
+    while (countdown > 0)
+    {
         cout << "while loop: " << countdown << '\n';
         --countdown;
     }
 
     // Use break to leave a loop; continue skips to its next iteration.
     vector<int> values = {4, 1, 3, 2};
-    for (int value : values) {
+    for (int value : values)
+    {
         cout << value << ' ';
     }
     cout << '\n';
@@ -145,7 +154,8 @@ int main()
     cout << "Vector size: " << numbers.size() << '\n';
     cout << "Last value: " << numbers.back() << '\n';
     numbers[0] = 6; // [] does not check bounds; use at(index) for checked access
-    for (size_t index = 0; index < numbers.size(); ++index) {
+    for (size_t index = 0; index < numbers.size(); ++index)
+    {
         cout << numbers[index] << ' ';
     }
     cout << '\n';
